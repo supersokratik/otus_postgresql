@@ -55,6 +55,7 @@ Cloud Backup Не подключён
 Доступ к серийной консоли запрещен
 ```
 3. добавить свой ssh ключ в metadata ВМ
+4. зайти удаленным ssh (первая сессия), не забывайте про ssh-add
 ```
 PS C:\Users\Ярослав> yc init
 Welcome! This command will take you through the configuration process.
@@ -110,7 +111,6 @@ applicable law.
 Creating directory '/home/bikuloffyaroslav'.
 bikuloffyaroslav@otus-vm-db-pg-vm:~$
 ```
-4. зайти удаленным ssh (первая сессия), не забывайте про ssh-add
 5. поставить PostgreSQL
 6. зайти вторым ssh (вторая сессия)
 7. запустить везде psql из под пользователя postgres
