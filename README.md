@@ -112,7 +112,9 @@ Creating directory '/home/bikuloffyaroslav'.
 bikuloffyaroslav@otus-vm-db-pg-vm:~$
 ```
 5. поставить PostgreSQL
+```
 sudo apt update && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && wget --quiet -0 - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo apt-get update && sudo apt -y install postgresql-14
+```
 6. зайти вторым ssh (вторая сессия)
 7. запустить везде psql из под пользователя postgres
 8. выключить auto commit
