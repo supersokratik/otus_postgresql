@@ -113,6 +113,29 @@ bikuloffyaroslav@otus-vm-db-pg-vm:~$
 ```
 5. поставить PostgreSQL
 ```
+ ssh-keygen -t ed25519
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (C:\Users\Ярослав/.ssh/id_ed25519): yc_key.pub
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in yc_key.pub.
+Your public key has been saved in yc_key.pub.pub.
+The key fingerprint is:
+SHA256:dceIZZpqKvSfBNPWa6t2+mgKz7GwTNquyqRjjwfXhy4 Ярослав@DESKTOP-ETLBR6V
+The key's randomart image is:
++--[ED25519 256]--+
+|            o    |
+|           * o   |
+|          = o o  |
+|       . + . .   |
+|    o + S .      |
+| . o + B   .     |
+| .o * = . o      |
+|=..E O =o+..     |
+|+==+* =+*=o      |
++----[SHA256]-----+
+
+
 sudo apt update && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && wget --quiet -0 - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo apt-get update && sudo apt -y install postgresql-14
 ```
 6. зайти вторым ssh (вторая сессия)
