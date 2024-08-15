@@ -339,6 +339,16 @@ openssl/focal-updates,focal-security 1.1.1f-1ubuntu2.23 amd64 [upgradable from: 
 ```
 6. зайти вторым ssh (вторая сессия)
 7. запустить везде psql из под пользователя postgres
+```
+bikuloffyaroslav@otus-vm-db-pg-vm:~$ sudo -u postgres psql
+psql (12.19 (Ubuntu 12.19-0ubuntu0.20.04.1))
+Type "help" for help.
+
+postgres=#
+postgres=# pg_lsclusters
+postgres-# q
+postgres-#
+```
 8. выключить auto commit
 
 ### сделать
