@@ -135,7 +135,188 @@ The key's randomart image is:
 |+==+* =+*=o      |
 +----[SHA256]-----+
 
+bikuloffyaroslav@otus-vm-db-pg-vm:~$ sudo apt-get -y install postgresql
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libgdbm-compat4 libllvm10 libperl5.30 libpq5 libsensors-config libsensors5
+  libxslt1.1 perl perl-modules-5.30 postgresql-12 postgresql-client-12
+  postgresql-client-common postgresql-common ssl-cert sysstat
+Suggested packages:
+  lm-sensors perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl
+  make libb-debug-perl liblocale-codes-perl postgresql-doc postgresql-doc-12
+  libjson-perl openssl-blacklist isag
+The following NEW packages will be installed:
+  libgdbm-compat4 libllvm10 libperl5.30 libpq5 libsensors-config libsensors5
+  libxslt1.1 perl perl-modules-5.30 postgresql postgresql-12
+  postgresql-client-12 postgresql-client-common postgresql-common ssl-cert
+  sysstat
+0 upgraded, 16 newly installed, 0 to remove and 0 not upgraded.
+Need to get 37.8 MB of archives.
+After this operation, 168 MB of additional disk space will be used.
+Get:1 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 perl-modules-5.30 all 5.30.0-9ubuntu0.5 [2,739 kB]
+Get:2 http://mirror.yandex.ru/ubuntu focal/main amd64 libgdbm-compat4 amd64 1.18.1-5 [6,244 B]
+Get:3 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 libperl5.30 amd64 5.30.0-9ubuntu0.5 [3,941 kB]
+Get:4 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 perl amd64 5.30.0-9ubuntu0.5 [224 kB]
+Get:5 http://mirror.yandex.ru/ubuntu focal/main amd64 libllvm10 amd64 1:10.0.0-4ubuntu1 [15.3 MB]
+Get:6 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 libpq5 amd64 12.19-0ubuntu0.20.04.1 [116 kB]
+Get:7 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 libsensors-config all 1:3.6.0-2ubuntu1.1 [6,052 B]
+Get:8 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 libsensors5 amd64 1:3.6.0-2ubuntu1.1 [27.2 kB]
+Get:9 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 libxslt1.1 amd64 1.1.34-4ubuntu0.20.04.1 [151 kB]
+Get:10 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 postgresql-client-common all 214ubuntu0.1 [28.2 kB]
+Get:11 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 postgresql-client-12 amd64 12.19-0ubuntu0.20.04.1 [1,054 kB]
+Get:12 http://mirror.yandex.ru/ubuntu focal/main amd64 ssl-cert all 1.0.39 [17.0 kB]
+Get:13 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 postgresql-common all 214ubuntu0.1 [169 kB]
+Get:14 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 postgresql-12 amd64 12.19-0ubuntu0.20.04.1 [13.5 MB]
+Get:15 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 postgresql all 12+214ubuntu0.1 [3,924 B]
+Get:16 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 sysstat amd64 12.2.0-2ubuntu0.3 [448 kB]
+Fetched 37.8 MB in 1s (44.6 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package perl-modules-5.30.
+(Reading database ... 102667 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.30_5.30.0-9ubuntu0.5_all.deb ...
+Unpacking perl-modules-5.30 (5.30.0-9ubuntu0.5) ...
+Selecting previously unselected package libgdbm-compat4:amd64.
+Preparing to unpack .../01-libgdbm-compat4_1.18.1-5_amd64.deb ...
+Unpacking libgdbm-compat4:amd64 (1.18.1-5) ...
+Selecting previously unselected package libperl5.30:amd64.
+Preparing to unpack .../02-libperl5.30_5.30.0-9ubuntu0.5_amd64.deb ...
+Unpacking libperl5.30:amd64 (5.30.0-9ubuntu0.5) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../03-perl_5.30.0-9ubuntu0.5_amd64.deb ...
+Unpacking perl (5.30.0-9ubuntu0.5) ...
+Selecting previously unselected package libllvm10:amd64.
+Preparing to unpack .../04-libllvm10_1%3a10.0.0-4ubuntu1_amd64.deb ...
+Unpacking libllvm10:amd64 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libpq5:amd64.
+Preparing to unpack .../05-libpq5_12.19-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking libpq5:amd64 (12.19-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libsensors-config.
+Preparing to unpack .../06-libsensors-config_1%3a3.6.0-2ubuntu1.1_all.deb ...
+Unpacking libsensors-config (1:3.6.0-2ubuntu1.1) ...
+Selecting previously unselected package libsensors5:amd64.
+Preparing to unpack .../07-libsensors5_1%3a3.6.0-2ubuntu1.1_amd64.deb ...
+Unpacking libsensors5:amd64 (1:3.6.0-2ubuntu1.1) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../08-libxslt1.1_1.1.34-4ubuntu0.20.04.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.34-4ubuntu0.20.04.1) ...
+Selecting previously unselected package postgresql-client-common.
+Preparing to unpack .../09-postgresql-client-common_214ubuntu0.1_all.deb ...
+Unpacking postgresql-client-common (214ubuntu0.1) ...
+Selecting previously unselected package postgresql-client-12.
+Preparing to unpack .../10-postgresql-client-12_12.19-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking postgresql-client-12 (12.19-0ubuntu0.20.04.1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../11-ssl-cert_1.0.39_all.deb ...
+Unpacking ssl-cert (1.0.39) ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../12-postgresql-common_214ubuntu0.1_all.deb ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+Unpacking postgresql-common (214ubuntu0.1) ...
+Selecting previously unselected package postgresql-12.
+Preparing to unpack .../13-postgresql-12_12.19-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking postgresql-12 (12.19-0ubuntu0.20.04.1) ...
+Selecting previously unselected package postgresql.
+Preparing to unpack .../14-postgresql_12+214ubuntu0.1_all.deb ...
+Unpacking postgresql (12+214ubuntu0.1) ...
+Selecting previously unselected package sysstat.
+Preparing to unpack .../15-sysstat_12.2.0-2ubuntu0.3_amd64.deb ...
+Unpacking sysstat (12.2.0-2ubuntu0.3) ...
+Setting up postgresql-client-common (214ubuntu0.1) ...
+Setting up perl-modules-5.30 (5.30.0-9ubuntu0.5) ...
+Setting up libsensors-config (1:3.6.0-2ubuntu1.1) ...
+Setting up libpq5:amd64 (12.19-0ubuntu0.20.04.1) ...
+Setting up libllvm10:amd64 (1:10.0.0-4ubuntu1) ...
+Setting up postgresql-client-12 (12.19-0ubuntu0.20.04.1) ...
+update-alternatives: using /usr/share/postgresql/12/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+Setting up ssl-cert (1.0.39) ...
+Setting up libgdbm-compat4:amd64 (1.18.1-5) ...
+Setting up libsensors5:amd64 (1:3.6.0-2ubuntu1.1) ...
+Setting up libxslt1.1:amd64 (1.1.34-4ubuntu0.20.04.1) ...
+Setting up libperl5.30:amd64 (5.30.0-9ubuntu0.5) ...
+Setting up sysstat (12.2.0-2ubuntu0.3) ...
 
+Creating config file /etc/default/sysstat with new version
+update-alternatives: using /usr/bin/sar.sysstat to provide /usr/bin/sar (sar) in auto mode
+Created symlink /etc/systemd/system/multi-user.target.wants/sysstat.service → /lib/systemd/system/sysstat.service.
+Setting up perl (5.30.0-9ubuntu0.5) ...
+Setting up postgresql-common (214ubuntu0.1) ...
+Adding user postgres to group ssl-cert
+
+Creating config file /etc/postgresql-common/createcluster.conf with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+Removing obsolete dictionary files:
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service → /lib/systemd/system/postgresql.service.
+Setting up postgresql-12 (12.19-0ubuntu0.20.04.1) ...
+Creating new PostgreSQL cluster 12/main ...
+/usr/lib/postgresql/12/bin/initdb -D /var/lib/postgresql/12/main --auth-local peer --auth-host md5
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/12/main ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctlcluster 12 main start
+
+Ver Cluster Port Status Owner    Data directory              Log file
+12  main    5432 down   postgres /var/lib/postgresql/12/main /var/log/postgresql/postgresql-12-main.log
+update-alternatives: using /usr/share/postgresql/12/man/man1/postmaster.1.gz to provide /usr/share/man/man1/postmaster.1.gz (postmaster.1.gz) in auto mode
+Setting up postgresql (12+214ubuntu0.1) ...
+Processing triggers for systemd (245.4-4ubuntu3.23) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.16) ...
+bikuloffyaroslav@otus-vm-db-pg-vm:~$ sudo apt update && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && wget --quiet -0 - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo apt-get update && sudo apt -y install postgresql-14
+Hit:1 http://mirror.yandex.ru/ubuntu focal InRelease
+Get:2 http://mirror.yandex.ru/ubuntu focal-updates InRelease [128 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [128 kB]
+Hit:4 http://mirror.yandex.ru/ubuntu focal-backports InRelease
+Get:5 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 Packages [3,495 kB]
+Get:6 http://mirror.yandex.ru/ubuntu focal-updates/main i386 Packages [1,016 kB]
+Get:7 http://mirror.yandex.ru/ubuntu focal-updates/main Translation-en [543 kB]
+Get:8 http://mirror.yandex.ru/ubuntu focal-updates/main amd64 c-n-f Metadata [17.7 kB]
+Get:9 http://mirror.yandex.ru/ubuntu focal-updates/restricted amd64 Packages [3,152 kB]
+Get:10 http://mirror.yandex.ru/ubuntu focal-updates/restricted Translation-en [442 kB]
+Get:11 http://mirror.yandex.ru/ubuntu focal-updates/universe i386 Packages [801 kB]
+Get:12 http://mirror.yandex.ru/ubuntu focal-updates/universe amd64 Packages [1,219 kB]
+Get:13 http://mirror.yandex.ru/ubuntu focal-updates/universe Translation-en [294 kB]
+Get:14 http://mirror.yandex.ru/ubuntu focal-updates/universe amd64 c-n-f Metadata [27.8 kB]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [3,125 kB]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [796 kB]
+Get:17 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [464 kB]
+Get:18 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [14.1 kB]
+Get:19 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [3,034 kB]
+Get:20 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [425 kB]
+Get:21 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [999 kB]
+Get:22 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [674 kB]
+Get:23 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [212 kB]
+Get:24 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [21.0 kB]
+Fetched 21.0 MB in 4s (5,268 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+14 packages can be upgraded. Run 'apt list --upgradable' to see them.
+wget: invalid option -- '0'
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+gpg: no valid OpenPGP data found.
 sudo apt update && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && wget --quiet -0 - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo apt-get update && sudo apt -y install postgresql-14
 ```
 6. зайти вторым ssh (вторая сессия)
