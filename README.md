@@ -282,6 +282,7 @@ Setting up postgresql (12+214ubuntu0.1) ...
 Processing triggers for systemd (245.4-4ubuntu3.23) ...
 Processing triggers for man-db (2.9.1-1) ...
 Processing triggers for libc-bin (2.31-0ubuntu9.16) ...
+Запускаем обновление 
 bikuloffyaroslav@otus-vm-db-pg-vm:~$ sudo apt update && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && wget --quiet -0 - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo apt-get update && sudo apt -y install postgresql-14
 Hit:1 http://mirror.yandex.ru/ubuntu focal InRelease
 Get:2 http://mirror.yandex.ru/ubuntu focal-updates InRelease [128 kB]
@@ -317,7 +318,24 @@ Usage: wget [OPTION]... [URL]...
 
 Try `wget --help' for more options.
 gpg: no valid OpenPGP data found.
-sudo apt update && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' && wget --quiet -0 - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo apt-get update && sudo apt -y install postgresql-14
+
+bikuloffyaroslav@otus-vm-db-pg-vm:~$ apt list --upgradable
+Listing... Done
+busybox-initramfs/focal-updates,focal-security 1:1.30.1-4ubuntu6.5 amd64 [upgradable from: 1:1.30.1-4ubuntu6.4]
+busybox-static/focal-updates,focal-security 1:1.30.1-4ubuntu6.5 amd64 [upgradable from: 1:1.30.1-4ubuntu6.4]
+curl/focal-updates,focal-security 7.68.0-1ubuntu2.23 amd64 [upgradable from: 7.68.0-1ubuntu2.22]
+krb5-locales/focal-updates,focal-updates,focal-security,focal-security 1.17-6ubuntu4.6 all [upgradable from: 1.17-6ubuntu4.4]
+libcurl4/focal-updates,focal-security 7.68.0-1ubuntu2.23 amd64 [upgradable from: 7.68.0-1ubuntu2.22]
+libgssapi-krb5-2/focal-updates,focal-security 1.17-6ubuntu4.6 amd64 [upgradable from: 1.17-6ubuntu4.4]
+libk5crypto3/focal-updates,focal-security 1.17-6ubuntu4.6 amd64 [upgradable from: 1.17-6ubuntu4.4]
+libkrb5-3/focal-updates,focal-security 1.17-6ubuntu4.6 amd64 [upgradable from: 1.17-6ubuntu4.4]
+libkrb5support0/focal-updates,focal-security 1.17-6ubuntu4.6 amd64 [upgradable from: 1.17-6ubuntu4.4]
+libssl1.1/focal-updates,focal-security 1.1.1f-1ubuntu2.23 amd64 [upgradable from: 1.1.1f-1ubuntu2.22]
+linux-generic/focal-updates,focal-security 5.4.0.192.190 amd64 [upgradable from: 5.4.0.190.188]
+linux-headers-generic/focal-updates,focal-security 5.4.0.192.190 amd64 [upgradable from: 5.4.0.190.188]
+linux-image-generic/focal-updates,focal-security 5.4.0.192.190 amd64 [upgradable from: 5.4.0.190.188]
+openssl/focal-updates,focal-security 1.1.1f-1ubuntu2.23 amd64 [upgradable from: 1.1.1f-1ubuntu2.22]
+
 ```
 6. зайти вторым ssh (вторая сессия)
 7. запустить везде psql из под пользователя postgres
