@@ -242,10 +242,18 @@ bikuloffyaroslav@otus-vm-db-pg-vm:~$ sudo -u postgres psql
 psql (14.13 (Ubuntu 14.13-1.pgdg20.04+1), server 12.19 (Ubuntu 12.19-0ubuntu0.20.04.1))
 Type "help" for help.
 
-postgres=#
-postgres=# pg_lsclusters
-postgres-# q
-postgres-#
+postgres=# \l
+                                  List of databases
+   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
+-----------+----------+----------+-------------+-------------+-----------------------
+ postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+(3 rows)
+
+(END)
 ```
 8. выключить auto commit
 
