@@ -254,6 +254,27 @@ postgres=# \l
 (3 rows)
 
 (END)
+
+postgres=# alter user postgres password 'postgres';
+ALTER ROLE
+
+bikuloffyaroslav@otus-vm-db-pg-vm:~$ exit
+logout
+Connection to 51.250.37.122 closed.
+ERROR: exit status 127
+
+
+                      client-trace-id: a567208d-f4b1-4ef9-9bad-8d37d1d450d2
+
+                                                                           Use client-trace-id for investigation of issues in cloud support
+                   If you are going to ask for help of cloud support, please send the following trace file: C:\Users\Ярослав\.config\yandex-cloud\logs\2024-08-17T13-17-50.461-yc_compute_ssh.txt
+
+PS C:\Users\Ярослав> yc compute instances list
++----------------------+------------------+---------------+---------+---------------+-------------+
+|          ID          |       NAME       |    ZONE ID    | STATUS  |  EXTERNAL IP  | INTERNAL IP |
++----------------------+------------------+---------------+---------+---------------+-------------+
+| fv49egohbnhq7mt5bn3t | otus-vm-db-pg-vm | ru-central1-d | RUNNING | 51.250.37.122 | 10.131.0.6  |
++----------------------+------------------+---------------+---------+---------------+-------------+
 ```
 8. выключить auto commit
 
