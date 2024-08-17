@@ -239,7 +239,7 @@ Ver Cluster Port Status Owner    Data directory              Log file
 7. запустить везде psql из под пользователя postgres
 ```
 bikuloffyaroslav@otus-vm-db-pg-vm:~$ sudo -u postgres psql
-psql (12.19 (Ubuntu 12.19-0ubuntu0.20.04.1))
+psql (14.13 (Ubuntu 14.13-1.pgdg20.04+1), server 12.19 (Ubuntu 12.19-0ubuntu0.20.04.1))
 Type "help" for help.
 
 postgres=#
