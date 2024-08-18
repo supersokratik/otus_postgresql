@@ -310,7 +310,9 @@ PS C:\Users\Ярослав> yc compute instances list
 +----------------------+------------------+---------------+---------+---------------+-------------+
 ```
 8. выключить auto commit
-
+```
+postgres=# AUTOCOMMIT = 'off'
+```
 ### сделать
 
 1. в первой сессии новую таблицу и наполнить ее данными create table persons(id serial, first_name text, second_name text); insert into persons(first_name, second_name) values('ivan', 'ivanov'); insert into persons(first_name, second_name) values('petr', 'petrov'); commit;
