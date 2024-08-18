@@ -328,14 +328,32 @@ WARNING:  there is no transaction in progress
 COMMIT
 ```
 
-2. посмотреть текущий уровень изоляции: show transaction isolation level
+2. посмотреть текущий уровень изоляции: show transaction isolation level;
+```
+ transaction_isolation
+-----------------------
+ read committed
+(1 row)
+
+(END)
+```q\q
+
 3. начать новую транзакцию в обоих сессиях с дефолтным (не меняя) уровнем изоляции
 4. в первой сессии добавить новую запись insert into persons(first_name, second_name) values('sergey', 'sergeev');
 ```
 postgres=# insert into persons(first_name, second_name) values('sergey', 'sergeev');
 INSERT 0 1
 ```
-5. сделать select from persons во второй сессии
+5. сделать select from persons во второй сессии 
+postgres=# select * from persons where id=3;
+```
+ id | first_name | second_name
+----+------------+-------------
+  3 | sergey     | sergeev
+(1 row)
+
+(END)
+```
 6. видите ли вы новую запись и если да то почему?
 7. завершить первую транзакцию - commit;
 8. сделать select from persons во второй сессии
