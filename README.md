@@ -355,13 +355,34 @@ postgres=# select * from persons where id=3;
 (END)
 ```
 6. видите ли вы новую запись и если да то почему?
+```
+вижу транзакцию в другой сессии. видимо потому, что селект не блокирует таблицы.
+```
 7. завершить первую транзакцию - commit;
+```
+postgres=# commit;
+WARNING:  there is no transaction in progress
+COMMIT
+postgres=#
+```
 8. сделать select from persons во второй сессии
+селект не работает. и не добавляет записи.
 9. видите ли вы новую запись и если да то почему?
 10. завершите транзакцию во второй сессии
 11. начать новые но уже repeatable read транзации - set transaction isolation level repeatable read;
 12. в первой сессии добавить новую запись insert into persons(first_name, second_name) values('sveta', 'svetova');
 13. сделать select* from persons во второй сессии*
+```
+ id | first_name | second_name
+----+------------+-------------
+  1 | ivan       | ivanov
+  2 | petr       | petrov
+  3 | sergey     | sergeev
+  4 | sergey     | sergeev
+(4 rows)
+
+(END)
+```
 14. видите ли вы новую запись и если да то почему?
 15. завершить первую транзакцию - commit;
 16. сделать select from persons во второй сессии
