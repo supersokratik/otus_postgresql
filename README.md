@@ -331,6 +331,10 @@ COMMIT
 2. посмотреть текущий уровень изоляции: show transaction isolation level
 3. начать новую транзакцию в обоих сессиях с дефолтным (не меняя) уровнем изоляции
 4. в первой сессии добавить новую запись insert into persons(first_name, second_name) values('sergey', 'sergeev');
+```
+postgres=# insert into persons(first_name, second_name) values('sergey', 'sergeev');
+INSERT 0 1
+```
 5. сделать select from persons во второй сессии
 6. видите ли вы новую запись и если да то почему?
 7. завершить первую транзакцию - commit;
