@@ -110,6 +110,24 @@ applicable law.
 
 Creating directory '/home/bikuloffyaroslav'.
 bikuloffyaroslav@otus-vm-db-pg-vm:~$
+
+**sudo nano /etc/postgresql/14/main/postgresql.conf**
+
+# If external_pid_file is not explicitly set, no extra PID file is written.
+external_pid_file = '/var/run/postgresql/14-main.pid'                   # write>
+                                        # (change requires restart)
+
+
+#------------------------------------------------------------------------------
+# CONNECTIONS AND AUTHENTICATION
+#------------------------------------------------------------------------------
+
+# - Connection Settings -
+
+listen_addresses = '*'          # what IP address(es) to listen on;
+                                        # comma-separated list of addresses;
+File Name to Write: /etc/postgresql/14/main/postgresql.conf
+
 ```
 5. поставить PostgreSQL
 ```
