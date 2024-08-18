@@ -128,6 +128,21 @@ listen_addresses = '*'          # what IP address(es) to listen on;
                                         # comma-separated list of addresses;
 File Name to Write: /etc/postgresql/14/main/postgresql.conf
 
+
+sudo nano /etc/postgresql/14/main/pg_hba.conf
+# Database administrative login by Unix domain socket
+local   all             postgres                                peer
+
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     peer
+# IPv4 local connections:
+host    all             all             0.0.0.0/0            scram-sha-256
+# IPv6 local connections:
+host    all             all             ::1/128                 scram-sha-256
+# Allow replication connections from localhost, by a user with the
+
 ```
 5. поставить PostgreSQL
 ```
