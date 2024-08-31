@@ -115,3 +115,8 @@ postgres=# CREATE DATABASE otus;
 CREATE DATABASE
 postgres=#
 ```
+postgres=# \conninfo
+```
+You are connected to database "postgres" as user "postgres" on host "pg-server" (address "172.18.0.2") at port "5432".
+postgres=#
+```
