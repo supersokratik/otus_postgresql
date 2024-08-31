@@ -109,7 +109,7 @@ Password for user postgres:
 psql (15.8 (Debian 15.8-1.pgdg120+1))
 Type "help" for help.
 ```
-```
+
 postgres=# CREATE DATABASE otus;
 ```
 CREATE DATABASE
