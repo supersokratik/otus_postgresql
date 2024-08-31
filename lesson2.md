@@ -1,11 +1,14 @@
 PS C:\Users\Ярослав> yc compute ssh --name compute-vm-2-2-20-hdd-1724909041159 --folder-id b1gd7tphql41ehp4g4ua
+```
 Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-192-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/pro
 Last login: Thu Aug 29 05:49:22 2024 from 217.107.126.235
+```
 bikuloffyaroslav@compute-vm-2-2-20-hdd-1724909041159:~$ curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh && rm get-docker.sh && sudo usermod -aG docker $USER && newgrp docker
+```
 # Executing docker install script, commit: 0d6f72e671ba87f7aa4c6991646a1a5b9f9dae84
 Warning: the "docker" command appears to already exist on this system.
 
@@ -73,10 +76,13 @@ WARNING: Access to the remote API on a privileged Docker daemon is equivalent
          documentation for details: https://docs.docker.com/go/attack-surface/
 
 ================================================================================
-
+```
 bikuloffyaroslav@compute-vm-2-2-20-hdd-1724909041159:~$ sudo docker network create pg-net
+```
 f5bd98f4ef0fd301c3c7ca409a2ead1996d13c5f0adc9f2b331876c29dfc08d3
+```
 g-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v /var/lib/postgres:/var/lib/postgresql/data postgres:15
+```
 Unable to find image 'postgres:15' locally
 15: Pulling from library/postgres
 e4fff0779e6d: Pull complete
@@ -96,14 +102,15 @@ a733d89613cc: Pull complete
 Digest: sha256:0836104ba0de8d09e8d54e2d6a28389fbce9c0f4fe08f4aa065940452ec61c30
 Status: Downloaded newer image for postgres:15
 039a2ee0094a319eb6fb0e60c92b2dc5b6c2b1dff641e4c05b7597331790c81a
+```
 bikuloffyaroslav@compute-vm-2-2-20-hdd-1724909041159:~$ sudo docker run -it --rm --network pg-net --name pg-client postgres:15 psql -h pg-server -U postgres
 Password for user postgres:
-psql: error: connection to server at "pg-server" (172.18.0.2), port 5432 failed: FATAL:  password authentication failed for user "postgres"
-bikuloffyaroslav@compute-vm-2-2-20-hdd-1724909041159:~$ sudo docker run -it --rm --network pg-net --name pg-client postgres:15 psql -h pg-server -U postgres
-Password for user postgres:
+```
 psql (15.8 (Debian 15.8-1.pgdg120+1))
 Type "help" for help.
-
+```
+```
 postgres=# CREATE DATABASE otus;
 CREATE DATABASE
 postgres=#
+```
