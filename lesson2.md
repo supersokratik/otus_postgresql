@@ -111,6 +111,7 @@ Type "help" for help.
 ```
 ```
 postgres=# CREATE DATABASE otus;
+```
 CREATE DATABASE
 postgres=#
 ```
