@@ -150,7 +150,7 @@ CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS   
 bikuloffyaroslav@compute-vm-2-2-20-hdd-1724909041159:~$
 ```
 
-Проверяем, что все ранее созданные данные остались на месте:
+Проверяем, что все ранее созданные данные (таблица otus) остались на месте:
 
   ```
                                                   List of databases
