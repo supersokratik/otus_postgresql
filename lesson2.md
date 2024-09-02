@@ -149,3 +149,21 @@ CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS   
 05b593543bf4   postgres:15   "docker-entrypoint.s…"   29 minutes ago   Up 29 minutes   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   pg-server
 bikuloffyaroslav@compute-vm-2-2-20-hdd-1724909041159:~$
 ```
+
+Проверяем, что все ранее созданные данные остались на месте:
+
+  ```
+                                                  List of databases
+       Name        |  Owner   | Encoding |  Collate   |   Ctype    | ICU Locale | Locale Provider |   Access privileges
+-------------------+----------+----------+------------+------------+------------+-----------------+-----------------------
+ otus              | postgres | UTF8     | en_US.utf8 | en_US.utf8 |            | libc            |
+ postgres          | postgres | UTF8     | en_US.utf8 | en_US.utf8 |            | libc            |
+ readme_to_recover | postgres | UTF8     | en_US.utf8 | en_US.utf8 |            | libc            |
+ template0         | postgres | UTF8     | en_US.utf8 | en_US.utf8 |            | libc            | =c/postgres          +
+                   |          |          |            |            |            |                 | postgres=CTc/postgres
+ template1         | postgres | UTF8     | en_US.utf8 | en_US.utf8 |            | libc            | =c/postgres          +
+                   |          |          |            |            |            |                 | postgres=CTc/postgres
+(5 rows)
+
+(END)
+```
