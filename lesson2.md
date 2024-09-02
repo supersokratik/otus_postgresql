@@ -132,3 +132,20 @@ postgres=# \l
            |          |          |            |            |            |                 | postgres=CTc/postgres
 (4 rows)
 ```
+остановить контейнер с сервером
+```
+bikoffyaroslav@compute-vm-2-2-20-hdd-1724909041159:~$ sudo docker stop ca7f8ec830aa
+ca7f8ec830aa
+```
+удалить контейнер
+```
+bikuloffyaroslav@compute-vm-2-2-20-hdd-1724909041159:~$ sudo docker rm ca7f8ec83830aa
+ca7f8ec830aa
+```
+создать его заново 
+```
+bikuloffyaroslav@compute-vm-2-2-20-hdd-1724909041159:~$ sudo docker ps -a
+CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+05b593543bf4   postgres:15   "docker-entrypoint.s…"   29 minutes ago   Up 29 minutes   0.0.0.0:5432->5432/tcp, :::5432->5432/tcp   pg-server
+bikuloffyaroslav@compute-vm-2-2-20-hdd-1724909041159:~$
+```
